@@ -1,0 +1,90 @@
+.deals{
+    padding: 120px 7.4vw;
+    &_title{
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+        position: relative;
+        & span{
+            position: absolute;
+            bottom: -16px;
+            width: 13.43vw;
+            border: 3px solid #eca00d;
+            height: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 142px;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -3px;
+                width: 41vw;
+                border: 1px solid #e0e6e8;
+                height: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                min-width: 300px;
+            }
+        }
+    }
+    &_card{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        background: #fff;
+        border: 1px solid #d3c9c9; 
+        &_type{
+            position: absolute;
+            background: #eca00d;
+            padding: 10px;
+        }
+        &_img{
+            width: 27vw;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+        &_title{
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+        }
+        &_text{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 167%;
+        }
+        &_descri{
+            padding: 2.5vw 1.6vw 1.2vw;
+            max-width: 23.8vw;
+            display: block !important;
+        }
+        &s{
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .deals{
+        &_card{
+            &_img{
+                width: 85vw;
+            }
+            &_descri{
+                max-width: 85vw;
+            }
+            &s{
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                justify-content: center;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,314 @@
+.main {
+    display: flex;
+    flex-direction: column;
+
+    &_inner {
+        position: relative;
+        background:
+            url(../Img/banner.png) center/cover no-repeat;
+        padding: 13px 7.4vw 0;
+        height: 980px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 0;
+        }
+    }
+
+    
+
+    &_content {
+        position: relative;
+        padding: 9.5rem 0 11.2rem;
+        text-align: center;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5.4rem;
+
+        &_title {
+            font-weight: 700;
+            font-size: 7.5rem;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            z-index: 1;
+            & span {
+                font-size: 3.125rem;
+            }
+            @media (max-width: 600px) {
+                font-size: 42px;
+                & span{
+                    font-size: 24px;
+                }
+            }
+        }
+
+        &_booking {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+
+            &_btn {
+                text-align: center;
+                width: 140px;
+                padding: 20px;
+                font-weight: 700;
+                font-size: 1.125rem;
+                backdrop-filter: blur(5px);
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 0.3125rem 0.3125rem 0 0;
+                border: none;
+                cursor: pointer;
+                text-transform: uppercase;
+                @media (max-width: 420px) {
+                    font-size: 1rem;
+                    height: max-content;
+                    width: max-content;
+                }
+                &s {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 17px;
+                    max-width: 1060px;
+                    justify-content: center;
+                }
+            }
+
+            &_form {
+                padding: 1.82vw 2.66vw 3.29vw 2.66vw;
+                backdrop-filter: blur(5px);
+                background: rgba(255, 255, 255, 0.4);
+                border-radius: 0.625rem;
+                display: grid;
+                gap: 1.25rem;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                z-index: 99;
+
+                grid-template-columns: repeat(6, 1fr);
+
+                @media (max-width: 1305px) {
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, auto);
+                }
+                @media (max-width: 768px) {
+                    grid-template-columns: repeat(2,1fr);
+                    
+                }
+
+                &_btn {
+                    background: #eca00d;
+                    padding: 1.302vw 2.969vw;
+                    border: none;
+                    cursor: pointer;
+                    font-weight: 700;
+                    font-size: 1.125rem;
+                    align-self: flex-end;
+                    
+                    @media (max-width: 768px) {
+                        width: 24.4vw;
+                    }
+                }
+
+                &_div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 0.4375rem;
+
+                    & label {
+                        font-weight: 700;
+                        font-size: 1.125rem;
+                        color: #fff;
+
+                        @media (max-width: 768px) {
+                            color: #000;
+                        }
+                    }
+
+                    & input {
+                        padding: 1.5625rem 1.125rem 1.5625rem 1.5625rem;
+                        max-width: 143px;
+                        font-weight: 700;
+                        font-size: 1.125rem;
+
+                        @media (max-width: 768px) {
+                            width: 24.4vw;
+                            max-width: 158px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_bottom {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        backdrop-filter: blur(15px);
+        background: rgba(163, 168, 178, 0.6);
+        z-index: -1;
+        padding: 2.25rem 7.4vw;
+
+        &_text {
+            display: flex;
+            align-items: center;
+            gap: 1.1875rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            z-index: 1;
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }
+    }
+}
+
+
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    @media (max-width: 376px) {
+        justify-content: center;
+    }
+    &::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        border: 1px solid #d0c7c7;
+        position: absolute;
+        bottom: -9px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    &_title {
+        font-weight: 700;
+        font-size: 2.875rem;
+        color: #fff;
+        display: flex;
+        gap: 1.875rem;
+        align-items: center;
+        z-index: 1;
+    }
+
+    &_list {
+        display: flex;
+        gap: 1.4375rem;
+        z-index: 1;
+
+        @media (max-width: 890px) {
+            display: none;
+        }
+    }
+
+    &_link a {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        font-size: 1.5rem;
+        color: #fff;
+        z-index: 1;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    z-index: 999;
+
+    @media (max-width: 890px) and (min-width: 376px) {
+        display: block;
+    }
+
+    .hamburger {
+        position: relative;
+        width: 50px;
+        height: 15px;
+        transition: transform 0.3s ease-in-out;
+        transform-origin: center;
+
+        .line {
+            width: 50px;
+            height: 5px;
+            background-color: #ecf0f1;
+            display: block;
+            margin: 0 auto;
+            transition: all 0.3s ease-in-out;
+
+            &:not(:last-child) {
+                margin-bottom: 10px; // Gap between lines when not active
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.is-active {
+            .line {
+                width: 35px;
+                margin-bottom: 0; // Remove gap between lines when active
+
+                &:nth-child(1) {
+                    transform: translateY(5px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-5px) rotate(-45deg);
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                box-sizing: border-box;
+                width: 70px;
+                height: 70px;
+                border: 5px solid #ecf0f1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                border-radius: 50%;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.slide-fade-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+.active {
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.4);
+}

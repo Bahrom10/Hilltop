@@ -1,0 +1,210 @@
+.footer {
+    padding: 126px 7.4vw 31px;
+    background: #252323;
+
+    @media (max-width: 1440px) {
+
+        &_top {
+            flex-direction: column;
+            align-items: center;
+            gap: 45px;
+            justify-content: center;
+        }
+
+        &_title {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 25px 5.3vw 72px;
+
+    }
+
+    &_top {
+        display: flex;
+        justify-content: space-between;
+
+        &_btn {
+            font-weight: 700;
+            font-size: 36px;
+            background: #eca00d;
+            padding: 15px 41px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            
+            &s {
+                display: flex;
+                gap: 45px;
+            }
+            @media (max-width: 1536px) {
+                font-size: 30px;
+                &s{
+                    gap: 30px;
+                }
+            }
+        }
+    }
+
+    &_title {
+        font-weight: 700;
+        font-size: 56px;
+        color: #fff;
+    }
+
+    &_descr {
+        max-width: 365px;
+
+        &_adress,
+        &_phone,
+        &_email,
+        a {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 167%;
+            color: #fff;
+        }
+
+        &_adress {
+            display: flex;
+            flex-direction: column;
+
+            & span {
+                text-align: right;
+            }
+        }
+
+        &_phone {
+            max-width: 311px;
+
+            a {
+                text-align: right;
+            }
+        }
+
+        &_link {
+            &s {
+                margin-top: 43px;
+                display: flex;
+                gap: 30px;
+            }
+        }
+    }
+    &_content{
+        margin-top: 94px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1024px) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+    &_form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 36.8vw;
+        &_title {
+            font-weight: 700;
+            font-size: 36px;
+            color: #fff;   
+        }
+        &_btn{
+            font-weight: 700;
+            font-size: 36px;
+            background: #eca00d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+        }
+        &_wrap{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &per{
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: space-between;
+                row-gap: 30px;
+            }
+        }
+        &_wi{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            & label{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 250%;
+                color: #fff;    
+            }
+            & input{
+                width: 14vw;
+            }
+            #peoplefooter{
+                width: 34vw;
+            }
+        }
+        &_inner{
+            display: flex;
+            justify-content: flex-end;
+            &_label{
+                font-weight: 700;
+                font-size: 36px;
+                background: #eca00d;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                width: 30%;
+            }
+            &_input{
+                display: flex;
+                align-items: center;
+                padding-left: 15px;
+                border: none;
+                outline: none;
+                padding: 27px 22px;
+                max-height: 73px;   
+                &::placeholder{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 250%;
+                }
+            }
+        }
+    }
+    &_bottom{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 104px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: -16px;
+            width: 100%;
+            border: 1px solid #d3c9c9;
+        }
+        &_p, &_a{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 222%;
+            color: #fff;
+        }
+    }
+}
+
+#namefooter, #phonefooter,#thourfooter{
+    width: 25vw;
+    @media (max-width: 1440px) {
+        width: 21vw;
+        .footer_form_inner{
+            justify-content: flex-end;
+        }
+    }
+}
